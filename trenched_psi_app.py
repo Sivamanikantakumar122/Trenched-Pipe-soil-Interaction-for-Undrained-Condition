@@ -27,25 +27,25 @@ with col1:
     st.markdown("### P5 (Low)")
     alpha_p5 = st.number_input("Alpha (P5)", value=0.5, key="a_p5")
     gbulk_p5 = st.number_input("Gamma Bulk (P5) [kN/m³]", value=16.0, key="g_p5")
-    sbnb_p5 = st.number_input("Su Backfill Non-Brittle (P5)", value=2.0, key="sbnb_p5")
-    sbo_p5 = st.number_input("Su Breakout (P5)", value=3.0, key="sbo_p5")
-    sba_p5 = st.number_input("Su Backfill Axial (P5)", value=2.5, key="sba_p5")
+    sbnb_p5 = st.number_input("Su Average of Backfill and bottom (P5)", value=2.0, key="sbnb_p5")
+    sbo_p5 = st.number_input("Su Bottom (P5)", value=3.0, key="sbo_p5")
+    sba_p5 = st.number_input("Su Backfill  (P5)", value=2.5, key="sba_p5")
 
 with col2:
     st.markdown("### P50 (Best)")
     alpha_p50 = st.number_input("Alpha (P50)", value=0.6, key="a_p50")
     gbulk_p50 = st.number_input("Gamma Bulk (P50) [kN/m³]", value=17.0, key="g_p50")
-    sbnb_p50 = st.number_input("Su Backfill Non-Brittle (P50)", value=3.0, key="sbnb_p50")
-    sbo_p50 = st.number_input("Su Breakout (P50)", value=4.0, key="sbo_p50")
-    sba_p50 = st.number_input("Su Backfill Axial (P50)", value=3.5, key="sba_p50")
+    sbnb_p50 = st.number_input("Su Average of Backfill and bottom (P50)", value=3.0, key="sbnb_p50")
+    sbo_p50 = st.number_input("Su Bottom (P50)", value=4.0, key="sbo_p50")
+    sba_p50 = st.number_input("Su Backfill  (P50)", value=3.5, key="sba_p50")
 
 with col3:
     st.markdown("### P95 (High)")
     alpha_p95 = st.number_input("Alpha (P95)", value=0.8, key="a_p95")
     gbulk_p95 = st.number_input("Gamma Bulk (P95) [kN/m³]", value=18.0, key="g_p95")
-    sbnb_p95 = st.number_input("Su Backfill Non-Brittle (P95)", value=5.0, key="sbnb_p95")
-    sbo_p95 = st.number_input("Su Breakout (P95)", value=6.0, key="sbo_p95")
-    sba_p95 = st.number_input("Su Backfill Axial (P95)", value=5.0, key="sba_p95")
+    sbnb_p95 = st.number_input("Su Average of Backfill and bottom (P95)", value=5.0, key="sbnb_p95")
+    sbo_p95 = st.number_input("Su Bottom (P95)", value=6.0, key="sbo_p95")
+    sba_p95 = st.number_input("Su Backfill  (P95)", value=5.0, key="sba_p95")
 
 # Consolidate inputs for the backend
 soil_inputs = {
@@ -85,3 +85,4 @@ if st.button("Run Trenched Analysis", type="primary"):
 
 else:
     st.info("Adjust parameters above and click 'Run Trenched Analysis'.")
+
