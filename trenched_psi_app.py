@@ -9,6 +9,7 @@ st.markdown("---")
 
 # --- SIDEBAR: PIPELINE INPUTS ---
 st.sidebar.header("1. Physical Pipeline Data")
+st.sidebar.header("Prepared by Siva Manikanta Kumar")
 
 dop = st.sidebar.number_input("Outer Diameter (Dop) [m]", value=0.40, format="%.3f")
 tp = st.sidebar.number_input("Wall Thickness (tp) [m]", value=0.015, format="%.3f")
@@ -16,10 +17,7 @@ h_trench = st.sidebar.number_input("Trench Height (H) [m]", value=1.00, format="
 
 st.sidebar.markdown("---")
 st.sidebar.info("Adjust Soil Parameters in the main window.")
-st.sidebar.markdown("---")
-st.sidebar.info("Prepared by Siva Manikanta Kumar")
-st.sidebar.markdown("---")
-st.sidebar.info("Geotechnical Engineer")
+
 
 # --- MAIN WINDOW: SOIL INPUTS ---
 st.subheader("2. Soil Parameters (P5 / P50 / P95)")
@@ -89,5 +87,6 @@ if st.button("Run Trenched Analysis", type="primary"):
 
 else:
     st.info("Adjust parameters above and click 'Run Trenched Analysis'.")
+
 
 
